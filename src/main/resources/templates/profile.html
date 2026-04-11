@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kashi - The Spiritual Capital of India</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/profile.css">
+    <link rel="icon" type="image/png" href="kashi.png">
+</head>
+<body>
+
+<h2 style="text-align: center; font-size: 30px;">
+    Hi! <span th:text="${name}"></span>
+</h2>
+
+<!--   Feedback sending Notification-->
+<!--<div id="msg" th:if="${success}" style="color: green; text-align:center;">-->
+<!--    <p th:text="${success}"></p>-->
+<!--</div>-->
+
+<header class="navbar">
+    <div class="logo">KASHI</div>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About Kashi</a></li>
+            <li><a href="#ghats">Ghats</a></li>
+            <li><a href="#temples">Temples</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+
+            <li>
+                <form th:action="@{/logout}" method="get">
+                    <button class="btn" type="submit">Logout</button>
+                </form>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<section id="hero" class="hero">
+    <div class="hero-content">
+        <h1>Welcome to Kashi – The Eternal City</h1>
+        <p>Discover the spiritual beauty of Varanasi and the sacred Ganges</p>
+        <a href="#ghats" class="btn">Explore Ghats</a>
+    </div>
+</section>
+
+<section id="about" class="about">
+    <h2>The Heart of Spiritual India</h2>
+    <div class="divider"></div>
+    <p>Varanasi, historically known as Kashi, is older than history, older than tradition, and older even than legend. It is considered the spiritual capital of India, resting on the sacred banks of the river Ganges. For thousands of years, seekers have journeyed to its ghats to find peace, enlightenment, and a profound connection to the divine. Experience the mesmerizing Ganga Aarti, wander through ancient alleys, and discover a city where life and death seamlessly intertwine.</p>
+    <a href="https://en.wikipedia.org/wiki/Varanasi">Learn More ↗</a>
+</section>
+
+<section id="ghats" class="ghats bg-light">
+    <h2>Famous Ghats</h2>
+    <div class="divider"></div>
+    <div class="cards-container">
+        <div class="card">
+<!--         <img src="https://images.unsplash.com/photo-1561359313-0639aad36611?auto=format&fit=crop&q=80&w=800" alt="Dashashwamedh Ghat">-->
+            <img src="/DashashwamedhGhat.png" alt="Dashashwamedh Ghat">
+            <div class="card-content">
+                <h3>Dashashwamedh Ghat</h3>
+                <p>The most spectacular and bustling ghat, famous for the magnificent evening Ganga Aarti performed by priests.</p>
+                <a class="LearnMore" href="https://en.wikipedia.org/wiki/Dashashwamedh_Ghat">Learn More ↗</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1571536802807-30451e3955d8?auto=format&fit=crop&q=80&w=800" alt="Assi Ghat">
+            <div class="card-content">
+                <h3>Assi Ghat</h3>
+                <p>Located at the confluence of the Ganges and Assi rivers, a peaceful spot popular among students, researchers, and tourists.</p>
+                <a class="LearnMore" href="https://en.wikipedia.org/wiki/Assi_Ghat">Learn More ↗</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="/ManikarnikaGhat.png" alt="Manikarnika Ghat">
+            <div class="card-content">
+                <h3>Manikarnika Ghat</h3>
+                <p>The most sacred cremation ground in Varanasi. It is a profound place reminding us of the ultimate truth of life.</p>
+                <a href="https://en.wikipedia.org/wiki/Manikarnika_Ghat">Learn More ↗</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="temples" class="temples">
+    <h2>Sacred Temples</h2>
+    <div class="divider"></div>
+    <div class="cards-container">
+        <div class="card">
+            <img src="/KashiVishwanath.png" alt="Kashi Vishwanath Temple">
+            <div class="card-content">
+                <h3>Kashi Vishwanath</h3>
+                <p>One of the twelve Jyotirlingas, this golden temple is the holiest shrine dedicated to Lord Shiva.</p>
+                <a href="https://en.wikipedia.org/wiki/Kashi_Vishwanath_Temple">Learn More ↗</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="/SankatMochan.png" alt="Sankat Mochan Temple">
+            <div class="card-content">
+                <h3>Sankat Mochan</h3>
+                <p>A deeply revered temple dedicated to Lord Hanuman, situated by the Assi river, bringing peace to devotees.</p>
+                <a href="https://en.wikipedia.org/wiki/Sankat_Mochan_Hanuman_Temple">Learn More ↗</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="/DurgaTemple.png" alt="Durga Temple">
+            <div class="card-content">
+                <h3>Durga Temple</h3>
+                <p>Known for its striking red color and multi-tiered shikhara, dedicated to Goddess Durga and home to many monkeys.</p>
+                <a href="https://en.wikipedia.org/wiki/Durga_Mandir,_Varanasi">Learn More ↗</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="gallery" class="gallery bg-light">
+    <h2>Gallery</h2>
+    <div class="divider"></div>
+    <div class="gallery-grid">
+        <img src="/GangaArti.png" alt="Ganga Aarti">
+        <img src="/BoatRide.png" alt="Boat Ride">
+        <img src="/HeaderImg.png" alt="Sunrise at Ghats">
+        <img src="/Temples.png" alt="Temples">
+        <img src="/EveningGhats.png" alt="Evening Ghats">
+        <img src="/CityStreetsVaranasi.png" alt="City Streets of Varanasi">
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <h2>Plan Your Spiritual Journey</h2>
+    <div class="divider"></div>
+    <form class="contact-form"
+          th:action="@{/feedbackForm}"
+          th:object="${feedback}"
+          method="post">
+
+        <div class="input-group">
+            <input type="text" th:field="*{name}" required placeholder="Your Name">
+        </div>
+
+        <div class="input-group">
+            <input type="email" th:field="*{email}" required placeholder="Your Email">
+        </div>
+
+        <div class="input-group">
+            <textarea th:field="*{message}" rows="5" required placeholder="Your Message"></textarea>
+        </div>
+
+        <button type="submit" class="btn">Send Message</button>
+
+    </form>
+</section>
+
+<footer>
+    <div class="social-icons">
+        <a href="#">Fb</a>
+        <a href="#">Ig</a>
+        <a href="#">X</a>
+    </div>
+    <p>&copy; 2026 Kashi Tourism. All Rights Reserved.</p>
+    <p class="made-with-love">Made with ❤️ in Kashi</p>
+</footer>
+
+<!--<script>-->
+<!--    setTimeout(() => {-->
+<!--        let msg = document.getElementById("msg");-->
+<!--        if(msg) msg.style.display = "none";-->
+<!--    }, 3000);-->
+<!--</script>-->
+
+</body>
+</html>
