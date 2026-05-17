@@ -45,36 +45,3 @@ public class UserController {
         return "redirect:/profile";
     }
 }
- // ===================This is Older One=================
-//@Controller
-//public class UserController {
-//
-//    @Autowired
-//    private com.project.loginPage.services.FeedbackService feedbackService;
-//
-//    @GetMapping("/profile")
-//    public String profile(Model model){
-//        model.addAttribute("feedback", new UserFeedback()); // MUST
-//        return "profile";
-//    }
-//
-//    @GetMapping("/profile")
-//    public String profile(HttpServletRequest request, Model model){
-//
-//        HttpSession session = request.getSession(false);
-//
-//        if(session == null || session.getAttribute("loggedInUser") == null){
-//            return "redirect:/loginForm";
-//        }
-//
-//        model.addAttribute("feedback", new UserFeedback());
-//        return "profile";
-//    }
-//
-//    @PostMapping("/feedbackForm")
-//    public String submitForm(@ModelAttribute("feedback") UserFeedback user){
-//        feedbackService.save(user);
-//        return "redirect:/profile";
-//    }
-//
-//}
