@@ -13,6 +13,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 @org.springframework.stereotype.Controller
 public class Controller {
 
+    @GetMapping("/login")
+    public String loginPage() {
+        return "Login";
+    }
+
     @Autowired
     private UserService userService;
 
