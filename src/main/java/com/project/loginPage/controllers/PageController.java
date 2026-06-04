@@ -11,12 +11,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 @org.springframework.stereotype.Controller
-public class Controller {
-
-    @GetMapping("/login")
-    public String loginPage() {
-        return "Login";
-    }
+public class PageController {
 
     @Autowired
     private UserService userService;
